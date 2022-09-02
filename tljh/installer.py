@@ -121,15 +121,15 @@ def ensure_jupyterhub_package(prefix):
     conda.ensure_pip_packages(
         prefix,
         [
-            "jupyterhub==1.*",
+            "jupyterhub==2.*",
             "jupyterhub-systemdspawner==0.16.*",
             "jupyterhub-firstuseauthenticator==1.*",
             "jupyterhub-nativeauthenticator==1.*",
             "jupyterhub-ldapauthenticator==1.*",
             "jupyterhub-tmpauthenticator==0.6.*",
-            "oauthenticator==14.*",
+            "oauthenticator==15.*",
             "jupyterhub-idle-culler==1.*",
-            "git+https://github.com/yuvipanda/jupyterhub-configurator@317759e17c8e48de1b1352b836dac2a230536dba",
+            "git+https://github.com/yuvipanda/jupyterhub-configurator",
         ],
         upgrade=True,
     )

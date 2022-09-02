@@ -49,7 +49,7 @@ import logging
 import shutil
 import urllib.request
 
-progress_page_favicon_url = "https://raw.githubusercontent.com/jupyterhub/jupyterhub/main/share/jupyterhub/static/favicon.ico"
+progress_page_favicon_url = "https://raw.githubusercontent.com/yamaton/jupyterhub/dev/share/jupyterhub/static/favicon.ico"
 progress_page_html = """
 <html>
 <head>
@@ -59,7 +59,7 @@ progress_page_html = """
   <meta http-equiv="refresh" content="30" >
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width">
-  <img class="logo" src="https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/HEAD/docs/images/logo/logo.png">
+  <img class="logo" src="https://raw.githubusercontent.com/yamaton/the-littlest-jupyterhub/dev/docs/images/logo/logo.png">
   <div class="loader center"></div>
   <div class="center main-msg">Please wait while your TLJH is setting up...</div>
   <div class="center logs-msg">Click the button below to see the logs</div>
@@ -453,9 +453,7 @@ def main():
     tljh_install_cmd.append(
         os.environ.get(
             "TLJH_BOOTSTRAP_PIP_SPEC",
-            "git+https://github.com/jupyterhub/the-littlest-jupyterhub.git@{}".format(
-                version
-            ),
+            "git+https://github.com/yamaton/the-littlest-jupyterhub@dev",
         )
     )
     if initial_setup:
