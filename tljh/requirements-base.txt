@@ -7,7 +7,6 @@
 #
 # JupyterHub + notebook package are base requirements for user environment
 jupyterhub==2.*
-notebook==6.*
 # Install additional notebook frontends!
 jupyterlab==3.*
 nteract-on-jupyter==2.*
