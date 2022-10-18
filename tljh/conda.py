@@ -45,7 +45,7 @@ def check_miniconda_version(prefix, version):
 
 
 @contextlib.contextmanager
-def download_miniconda_installer(installer_url, sha256sum):
+def download_miniconda_installer(installer_url, sha256sum=None):
     """
     Context manager to download miniconda installer from a given URL
 
@@ -60,7 +60,7 @@ def download_miniconda_installer(installer_url, sha256sum):
         f.flush()
         os.fsync(f.fileno())
 
-        if sha256_file(f.name) != sha256sum:
+        if sha256sum and sha256_file(f.name) != sha256sum:
             raise Exception("sha256sum hash mismatch! Downloaded file corrupted")
 
         yield f.name
