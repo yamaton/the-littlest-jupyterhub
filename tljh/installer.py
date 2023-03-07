@@ -168,6 +168,7 @@ def ensure_user_environment(user_requirements_txt_file):
     # Keep these in sync with tests/test_conda.py::prefix
     mambaforge_conda_new_version = "23.1.0"
     mambaforge_mamba_version = "1.3.1"
+    mambaforge_version = "22.11.1-0"
 
     if conda.check_miniconda_version(USER_ENV_PREFIX, mambaforge_conda_new_version):
         conda_version = "4.10.3"
@@ -178,9 +179,7 @@ def ensure_user_environment(user_requirements_txt_file):
     # If no prior miniconda installation is found, we can install a newer version
     else:
         logger.info("Downloading & setting up user environment...")
-        installer_url = "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-{arch}.sh".format(
-            arch=os.uname().machine
-        )
+        installer_url = f"https://github.com/conda-forge/miniforge/releases/download/{mambaforge_version}/Mambaforge-{mambaforge_version}-Linux-{os.uname().machine}.sh"
         with conda.download_miniconda_installer(
             installer_url
         ) as installer_path:
