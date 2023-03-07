@@ -166,8 +166,8 @@ def ensure_user_environment(user_requirements_txt_file):
         raise OSError("TLJH is only supported on Linux platforms.")
     # Then run `mamba --version` to get the conda and mamba versions
     # Keep these in sync with tests/test_conda.py::prefix
-    mambaforge_conda_new_version = "22.9.0"
-    mambaforge_mamba_version = "0.27.0"
+    mambaforge_conda_new_version = "23.1.0"
+    mambaforge_mamba_version = "1.3.1"
 
     if conda.check_miniconda_version(USER_ENV_PREFIX, mambaforge_conda_new_version):
         conda_version = "4.10.3"
