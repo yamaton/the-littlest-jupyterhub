@@ -6,7 +6,7 @@
 #          our integration tests fail.
 #
 # JupyterHub + notebook package are base requirements for user environment
-jupyterhub==2.*
+jupyterhub==3.*
 # Install additional notebook frontends!
 jupyterlab==3.*
 nteract-on-jupyter==2.*

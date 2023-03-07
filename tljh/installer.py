@@ -121,7 +121,7 @@ def ensure_jupyterhub_package(prefix):
     conda.ensure_pip_packages(
         prefix,
         [
-            "jupyterhub==2.*",
+            "jupyterhub==3.*",
             "jupyterhub-systemdspawner==0.16.*",
             "jupyterhub-firstuseauthenticator==1.*",
             "jupyterhub-nativeauthenticator==1.*",
